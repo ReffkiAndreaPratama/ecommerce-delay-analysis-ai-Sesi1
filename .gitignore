@@ -1,0 +1,40 @@
+# Data files are never committed. Regenerate the demo or place Olist CSVs here.
+*.csv
+*.zip
+*.parquet
+*.feather
+!data/README.md
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# Tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Streamlit / local secrets
+.streamlit/secrets.toml
+.env
+.env.*
+!.env.example
+
+# Generated artefacts
+results/*
+!results/.gitkeep
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

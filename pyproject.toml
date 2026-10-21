@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ecommerce-delay-analysis-ai"
+version = "0.1.0"
+description = "Leakage, imbalance, and temporal validation study for e-commerce late-delivery prediction"
+requires-python = ">=3.10"
+readme = "README.md"
+license = { text = "MIT" }
+dependencies = [
+    "pandas>=2.0,<3",
+    "numpy>=1.26,<3",
+    "scikit-learn>=1.4,<2",
+    "matplotlib>=3.8,<4",
+    "streamlit>=1.30,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+filterwarnings = [
+    "ignore::FutureWarning",
+]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
